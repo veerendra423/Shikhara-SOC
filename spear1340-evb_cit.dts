@@ -1,0 +1,241 @@
+/dts-v1/;
+
+/ {
+	#address-cells = <0x1>;
+	#size-cells = <0x1>;
+	interrupt-parent = <0x1>;
+	compatible = "st,spear1340-evb", "st,spear1340";
+	model = "ST SPEAr1340 Evaluation Board";
+
+	chosen {
+		bootargs = "console=ttyAMA0,115200";
+	};
+
+	aliases {
+
+	};
+
+	memory {
+		device_type = "memory";
+		reg = <0x0 0x40000000>;
+	};
+
+	cpus {
+		#address-cells = <0x1>;
+		#size-cells = <0x0>;
+
+		cpu@0 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a9";
+			reg = <0x0>;
+			clock-frequency = <0x2faf0800>;
+		};
+	};
+
+	interrupt-controller@d46f3000 {
+		compatible = "arm,pl390";
+		interrupt-controller;
+		#interrupt-cells = <0x3>;
+		reg = <0xd46f3000 0x1000 0xd46f2100 0x100>;
+		linux,phandle = <0x1>;
+		phandle = <0x1>;
+	};
+
+	l2-cache {
+		compatible = "arm,pl310-cache";
+		reg = <0xd46f4000 0x1000>;
+		cache-unified;
+		cache-level = <0x2>;
+	};
+
+	clocks {
+		#address-cells = <0x1>;
+		#size-cells = <0x0>;
+
+		xtal@25M {
+			#clock-cells = <0x0>;
+			compatible = "fixed-clock";
+			clock-frequency = <0x17d7840>;
+			linux,phandle = <0x2>;
+			phandle = <0x2>;
+		};
+
+		rtc32k-clock {
+			#clock-cells = <0x0>;
+			compatible = "fixed-clock";
+			clock-frequency = <0x7d00>;
+		};
+
+		pll_clk:pll_clk {
+			#clock-cells = <0x0>;
+			compatible = "fixed-factor-clock";
+			clocks = <0x2>;
+			clock-div = <0x1>;
+			clock-mult = <0x20>;
+			linux,phandle = <0x3>;
+			phandle = <0x3>;
+		};
+
+		apb_pclk:apb_pclk {
+			#clock-cells = <0x0>;
+			compatible = "fixed-factor-clock";
+			clocks = <0x3>;
+			clock-div = <0x8>;
+			clock-mult = <0x1>;
+			linux,phandle = <0x4>;
+			phandle = <0x4>;
+		};
+	};
+	
+
+	ahb {
+                #address-cells = <0x1>;
+                #size-cells = <0x1>;
+                compatible = "simple-bus";
+                ranges = <0xd4553000 0xd4553000 0x50000>;
+		
+		dwmmc0@d4555000 {
+                        compatible = "snps,dw-mshc";
+                        #address-cells = <0x1>;
+                        #size-cells = <0x0>;
+                        clock-frequency = <400000000>;
+                        reg = <0xd4555000 0x1000>;
+                        interrupt-parent = <0x1>;
+                        interrupts = <0 0x26 0>;
+                        clocks = <0x3>;
+                        clock-names = "pll_clk","apb_pclk";
+                        bus-width = <0x8>;
+                        data-addr = <0x200>;
+                        fifo-watermark-aligned;
+                        reset-names = "reset";
+                        broken-cd;
+                        fifo-depth = <0x80>;
+                        card-detect-delay = <0xc8>;
+                        cap-mmc-highspeed;
+                        cap-sd-highspeed;
+                };
+	};
+	
+	apb {
+		#address-cells = <0x1>;
+		#size-cells = <0x1>;
+		compatible = "simple-bus";
+		ranges = <0xd4560000 0xd4560000 0x50000>;
+
+		serial@d457b000 {
+			compatible = "arm,sbsa-uart";
+			reg = <0xd457b000 0x1000>;
+			interrupt-parent = <0x1>;
+			interrupts = <0x0 0x2c 0x4>;
+			current-speed = <0x1c200>;
+			status = "okay";
+		};
+
+		gpio@d4576000 {
+			compatible = "arm,pl061", "arm,primecell";
+			reg = <0xd4576000 0x1000>;
+			gpio-controller;
+			#gpio-cells = <0x2>;
+			interrupt-parent = <0x1>;
+			interrupts = <0x0 0x38 0x4>;
+			clocks = <0x4>;
+			clock-names = "apb_pclk";
+		};
+
+		gpio@d4577000 {
+			compatible = "arm,pl061", "arm,primecell";
+			reg = <0xd4577000 0x1000>;
+			gpio-controller;
+			#gpio-cells = <0x2>;
+			interrupt-parent = <0x1>;
+			interrupts = <0x0 0x39 0x4>;
+			clocks = <0x4>;
+			clock-names = "apb_pclk";
+		};
+
+		gpio@d4578000 {
+			compatible = "arm,pl061", "arm,primecell";
+			reg = <0xd4578000 0x1000>;
+			gpio-controller;
+			#gpio-cells = <0x2>;
+			interrupt-parent = <0x1>;
+			interrupts = <0x0 0x3a 0x4>;
+			clocks = <0x4>;
+			clock-names = "apb_pclk";
+		};
+
+		gpio@d4579000 {
+			compatible = "arm,pl061", "arm,primecell";
+			reg = <0xd4579000 0x1000>;
+			gpio-controller;
+			#gpio-cells = <0x2>;
+			interrupt-parent = <0x1>;
+			interrupts = <0x0 0x3b 0x4>;
+			clocks = <0x4>;
+			clock-names = "apb_pclk";
+		};
+
+		timer@d456e000 {
+			compatible = "arm,sp804", "arm,primecell";
+			reg = <0xd456e000 0x1000>;
+			interrupts = <0x0 0x29 0x4>;
+			clocks = <0x4>;
+			clock-names = "apb_pclk";
+		};
+
+		soc_i2s: i2s@d4581000 {
+                	compatible = "snps,designware-i2s";
+                	reg = <0xd4581000 0x1000>;
+			interrupt-parent = <0x1>;
+                        interrupts = <0x0 0x3c 0x4>;
+                	clocks = <&apb_pclk 0>;
+                	clock-names = "apb_pclk";
+                	#sound-dai-cells = <0>;
+                	dmas = <&pdma 5>;
+                	dma-names = "tx";
+        	};
+		
+		rtc@d45a3000 {
+                        compatible = "arm,pl030", "arm,primecell";
+                        reg = <0xd45a3000 0x1000>;
+                        interrupt-parent = <0x1>;
+                        interrupts = <0x0 0x3d 0x4>;
+                        clocks = <0x4>;
+                        clock-names = "apb_pclk";
+                };
+
+                watchdog@d4571000 {
+                        compatible = "arm,primecell";
+                        reg = <0xd4571000 0x1000>;
+                        interrupt-parent = <0x1>;
+                        interrupts = <0x0 0x28 0x4>;
+                        clocks = <0x4>;
+                        clock-names = "apb_pclk";
+                };
+		ssp@d4572000 {
+                        compatible = "arm,pl022", "arm,primecell";
+                        reg = <0xd4572000 0x1000>;
+                        interrupts = <0x0 0x3e 0x4>;
+                        num-cs = <2>;
+			#dma-cells = <1>;
+                        dmas = <&pdma 23 1>,
+                                <&pdma 24 0>;
+                        dma-names = "rx", "tx";
+			clocks = <0x4>;
+                        clock-names = "apb_pclk";
+                };
+		
+		pdma: pdma@d4565000 {
+                        compatible = "arm,pl330", "arm,primecell";
+                        reg = <0xd4565000 0x4000>;
+                        interrupts = <0x0 0x25 0x4>;
+                        #dma-cells = <1>;
+			#dma-channels = <8>;
+			#dma-requests = <32>;
+			dma-names = "tx", "rx";
+                        clocks = <0x4>;
+                        clock-names = "apb_pclk";
+                };
+	
+	};
+};
