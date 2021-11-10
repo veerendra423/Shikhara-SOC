@@ -1,0 +1,9 @@
+#
+# SPEAr Platform configuration file
+#
+
+config MACH_TYPE_ANUSOC
+	bool "ANUSOC from ANURAG"
+	depends on ARCH_MULTI_V7
+	help
+	  Supports ANUWAP board configured via the device-tree

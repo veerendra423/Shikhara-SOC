@@ -1,0 +1,50 @@
+!<thin>
+//                                              356       `
+tty_io.o/
+n_tty.o/
+tty_ioctl.o/
+tty_ldisc.o/
+tty_buffer.o/
+tty_port.o/
+tty_mutex.o/
+tty_ldsem.o/
+tty_baudrate.o/
+tty_jobctrl.o/
+n_null.o/
+pty.o/
+vt/vt_ioctl.o/
+vt/vc_screen.o/
+vt/selection.o/
+vt/keyboard.o/
+vt/consolemap.o/
+vt/consolemap_deftbl.o/
+vt/vt.o/
+vt/defkeymap.o/
+serial/serial_core.o/
+serial/earlycon.o/
+serial/amba-pl010.o/
+serial/amba-pl011.o/
+/0              0           0     0     644     39960     `
+/10             0           0     0     644     21796     `
+/19             0           0     0     644     12600     `
+/32             0           0     0     644     10520     `
+/45             0           0     0     644     8628      `
+/59             0           0     0     644     15296     `
+/71             0           0     0     644     2808      `
+/84             0           0     0     644     3628      `
+/97             0           0     0     644     3676      `
+/113            0           0     0     644     6768      `
+/128            0           0     0     644     3188      `
+/138            0           0     0     644     14532     `
+/145            0           0     0     644     14724     `
+/160            0           0     0     644     8692      `
+/176            0           0     0     644     6404      `
+/192            0           0     0     644     29224     `
+/207            0           0     0     644     11588     `
+/224            0           0     0     644     1740      `
+/248            0           0     0     644     58396     `
+/257            0           0     0     644     10456     `
+/273            0           0     0     644     37532     `
+/295            0           0     0     644     5576      `
+/314            0           0     0     644     10796     `
+/335            0           0     0     644     29744     `

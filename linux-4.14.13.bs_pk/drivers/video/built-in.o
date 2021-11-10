@@ -1,0 +1,38 @@
+!<thin>
+//                                              402       `
+hdmi.o/
+console/dummycon.o/
+fbdev/core/fb_cmdline.o/
+fbdev/core/fb_notify.o/
+fbdev/core/fbmem.o/
+fbdev/core/fbmon.o/
+fbdev/core/fbcmap.o/
+fbdev/core/fbsysfs.o/
+fbdev/core/modedb.o/
+fbdev/core/fbcvt.o/
+fbdev/core/fb_defio.o/
+fbdev/core/cfbfillrect.o/
+fbdev/core/cfbcopyarea.o/
+fbdev/core/cfbimgblt.o/
+fbdev/core/sysfillrect.o/
+fbdev/core/syscopyarea.o/
+fbdev/core/sysimgblt.o/
+fbdev/core/fb_sys_fops.o/
+/0              0           0     0     644     16432     `
+/8              0           0     0     644     2244      `
+/28             0           0     0     644     3820      `
+/53             0           0     0     644     2552      `
+/77             0           0     0     644     22128     `
+/97             0           0     0     644     3836      `
+/117            0           0     0     644     7112      `
+/138            0           0     0     644     7164      `
+/160            0           0     0     644     13560     `
+/181            0           0     0     644     4480      `
+/201            0           0     0     644     6708      `
+/224            0           0     0     644     4880      `
+/250            0           0     0     644     3692      `
+/276            0           0     0     644     3072      `
+/300            0           0     0     644     4876      `
+/326            0           0     0     644     3664      `
+/352            0           0     0     644     3060      `
+/376            0           0     0     644     2424      `

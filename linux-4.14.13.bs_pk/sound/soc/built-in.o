@@ -1,0 +1,27 @@
+!<thin>
+//                                              168       `
+soc-core.o/
+soc-dapm.o/
+soc-jack.o/
+soc-cache.o/
+soc-utils.o/
+soc-pcm.o/
+soc-io.o/
+soc-devres.o/
+soc-ops.o/
+soc-generic-dmaengine-pcm.o/
+dwc/dwc-i2s.o/
+dwc/dwc-pcm.o/
+
+/0              0           0     0     644     58760     `
+/12             0           0     0     644     49984     `
+/24             0           0     0     644     10212     `
+/36             0           0     0     644     1432      `
+/49             0           0     0     644     11272     `
+/62             0           0     0     644     32272     `
+/73             0           0     0     644     6240      `
+/83             0           0     0     644     3900      `
+/97             0           0     0     644     13196     `
+/108            0           0     0     644     6584      `
+/137            0           0     0     644     10540     `
+/152            0           0     0     644     4840      `

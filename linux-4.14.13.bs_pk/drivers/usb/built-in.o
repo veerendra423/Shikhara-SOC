@@ -1,0 +1,69 @@
+!<thin>
+//                                              492       `
+core/usb.o/
+core/hub.o/
+core/hcd.o/
+core/urb.o/
+core/message.o/
+core/driver.o/
+core/config.o/
+core/file.o/
+core/buffer.o/
+core/sysfs.o/
+core/endpoint.o/
+core/devio.o/
+core/notify.o/
+core/generic.o/
+core/quirks.o/
+core/devices.o/
+core/port.o/
+core/of.o/
+core/hcd-pci.o/
+phy/of.o/
+dwc3/core.o/
+dwc3/host.o/
+dwc3/dwc3-of-simple.o/
+dwc2/core.o/
+dwc2/core_intr.o/
+dwc2/platform.o/
+dwc2/params.o/
+dwc2/hcd.o/
+dwc2/hcd_intr.o/
+dwc2/hcd_queue.o/
+dwc2/hcd_ddma.o/
+host/pci-quirks.o/
+common/common.o/
+
+/0              0           0     0     644     17460     `
+/12             0           0     0     644     54608     `
+/24             0           0     0     644     33072     `
+/36             0           0     0     644     13076     `
+/48             0           0     0     644     23988     `
+/64             0           0     0     644     21080     `
+/79             0           0     0     644     15300     `
+/94             0           0     0     644     5228      `
+/107            0           0     0     644     3380      `
+/122            0           0     0     644     21072     `
+/136            0           0     0     644     4556      `
+/153            0           0     0     644     33072     `
+/167            0           0     0     644     2736      `
+/182            0           0     0     644     3648      `
+/198            0           0     0     644     3932      `
+/213            0           0     0     644     8016      `
+/229            0           0     0     644     8664      `
+/242            0           0     0     644     2400      `
+/253            0           0     0     644     8952      `
+/269            0           0     0     644     2164      `
+/279            0           0     0     644     16448     `
+/292            0           0     0     644     3076      `
+/305            0           0     0     644     5672      `
+/328            0           0     0     644     7516      `
+/341            0           0     0     644     3936      `
+/359            0           0     0     644     6308      `
+/376            0           0     0     644     10804     `
+/391            0           0     0     644     34328     `
+/403            0           0     0     644     16208     `
+/420            0           0     0     644     10116     `
+/438            0           0     0     644     10632     `
+/455            0           0     0     644     14364     `
+/474            0           0     0     644     6956      `

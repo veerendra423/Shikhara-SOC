@@ -1,0 +1,1 @@
+cmd_drivers/i2c/busses/i2c-designware-core.o := arm-linux-gnueabi-ld -EL    -r -o drivers/i2c/busses/i2c-designware-core.o drivers/i2c/busses/i2c-designware-common.o drivers/i2c/busses/i2c-designware-master.o drivers/i2c/busses/i2c-designware-slave.o 

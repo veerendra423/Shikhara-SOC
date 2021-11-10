@@ -1,0 +1,17 @@
+!<thin>
+//                                              86        `
+mtdcore.o/
+mtdsuper.o/
+mtdconcat.o/
+mtdpart.o/
+mtdchar.o/
+ofpart.o/
+chips/chipreg.o/
+
+/0              0           0     0     644     33852     `
+/11             0           0     0     644     3324      `
+/23             0           0     0     644     11404     `
+/36             0           0     0     644     15092     `
+/47             0           0     0     644     13904     `
+/58             0           0     0     644     5372      `
+/68             0           0     0     644     3296      `

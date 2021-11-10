@@ -1,0 +1,30 @@
+!<thin>
+//                                              204       `
+clk-devres.o/
+clk-bulk.o/
+clkdev.o/
+clk.o/
+clk-divider.o/
+clk-fixed-factor.o/
+clk-fixed-rate.o/
+clk-gate.o/
+clk-multiplier.o/
+clk-mux.o/
+clk-composite.o/
+clk-fractional-divider.o/
+clk-gpio.o/
+clk-conf.o/
+/0              0           0     0     644     3704      `
+/14             0           0     0     644     4212      `
+/26             0           0     0     644     9400      `
+/36             0           0     0     644     42684     `
+/43             0           0     0     644     10260     `
+/58             0           0     0     644     8028      `
+/78             0           0     0     644     7456      `
+/96             0           0     0     644     4592      `
+/108            0           0     0     644     2696      `
+/126            0           0     0     644     5944      `
+/137           /0           0     0     644     4920      `
+/154            0           0     0     644     4104      `
+/180            0           0     0     644     8288      `
+/192            0           0     0     644     3824      `

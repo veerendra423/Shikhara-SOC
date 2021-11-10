@@ -1,0 +1,1 @@
+cmd_drivers/i2c/busses/i2c-designware-pci.ko := arm-linux-gnueabi-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o drivers/i2c/busses/i2c-designware-pci.ko drivers/i2c/busses/i2c-designware-pci.o drivers/i2c/busses/i2c-designware-pci.mod.o ;  true

@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/pl111/pl111_drm.o := rm -f drivers/gpu/drm/pl111/pl111_drm.o; arm-linux-gnueabi-ar rcSTPD drivers/gpu/drm/pl111/pl111_drm.o drivers/gpu/drm/pl111/pl111_connector.o drivers/gpu/drm/pl111/pl111_display.o drivers/gpu/drm/pl111/pl111_drv.o

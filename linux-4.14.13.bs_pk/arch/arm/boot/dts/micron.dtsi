@@ -1,0 +1,70 @@
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Common devices used in different OMAP boards
+ */
+
+/ {
+Micron_DDR3SDRAM: ddr3 {
+		compatible	= "Micron-DDR3SDRAM","jedec,ddr3-s4";
+		density		= <4096>;
+		io-width	= <32>;
+
+		tRPab-min-tck	= <7>;
+		tRCD-min-tck	= <7>;
+		tWR-min-tck	= <3>;
+		tRASmin-min-tck	= <20>;
+		tRRD-min-tck	= <4>;
+		tWTR-min-tck	= <4>;
+		tXP-min-tck	= <3>;
+		tRTP-min-tck	= <4>;
+		tCKE-min-tck	= <3>;
+		tCKESR-min-tck	= <7>;
+		tFAW-min-tck	= <20>;
+
+/*		timings_elpida_ECB240ABACN_400mhz: lpddr2-timings@0 {
+			compatible	= "jedec,lpddr2-timings";
+			min-freq	= <10000000>;
+			max-freq	= <400000000>;
+			tRPab		= <21000>;
+			tRCD		= <18000>;
+			tWR		= <15000>;
+			tRAS-min	= <42000>;
+			tRRD		= <10000>;
+			tWTR		= <7500>;
+			tXP		= <7500>;
+			tRTP		= <7500>;
+			tCKESR		= <15000>;
+			tDQSCK-max	= <5500>;
+			tFAW		= <50000>;
+			tZQCS		= <90000>;
+			tZQCL		= <360000>;
+			tZQinit		= <1000000>;
+			tRAS-max-ns	= <70000>;
+			tDQSCK-max-derated = <6000>;
+		};
+
+		timings_elpida_ECB240ABACN_200mhz: lpddr2-timings@1 {
+			compatible	= "jedec,lpddr2-timings";
+			min-freq	= <10000000>;
+			max-freq	= <200000000>;
+			tRPab		= <21000>;
+			tRCD		= <18000>;
+			tWR		= <15000>;
+			tRAS-min	= <42000>;
+			tRRD		= <10000>;
+			tWTR		= <10000>;
+			tXP		= <7500>;
+			tRTP		= <7500>;
+			tCKESR		= <15000>;
+			tDQSCK-max	= <5500>;
+			tFAW		= <50000>;
+			tZQCS		= <90000>;
+			tZQCL		= <360000>;
+			tZQinit		= <1000000>;
+			tRAS-max-ns	= <70000>;
+			tDQSCK-max-derated = <6000>;
+		};
+
+*/
+	};
+};

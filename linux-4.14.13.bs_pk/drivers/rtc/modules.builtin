@@ -1,0 +1,2 @@
+kernel/drivers/rtc/rtc-pl030.ko
+kernel/drivers/rtc/rtc-pl031.ko

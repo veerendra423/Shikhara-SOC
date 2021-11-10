@@ -1,0 +1,4 @@
+kernel/drivers/input/serio/serio.ko
+kernel/drivers/input/serio/serport.ko
+kernel/drivers/input/serio/ambakmi.ko
+kernel/drivers/input/serio/libps2.ko
